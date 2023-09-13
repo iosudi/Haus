@@ -531,6 +531,8 @@ function videoSlide(index) {
   }, 550);
 }
 
+videoSlide(index);
+
 function before() {
   index--;
   if (index < 0) {
