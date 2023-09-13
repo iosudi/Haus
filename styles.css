@@ -2704,7 +2704,7 @@ button:hover {
 #subMenu {
   position: absolute;
   left: 0;
-  top: 35px;
+ top: 50px;
   padding: 0.5em;
   border: 1px solid var(--border-color);
   border-radius: 20px;
