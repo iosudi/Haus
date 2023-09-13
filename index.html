@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="resposinve.css" />
+    <title>Haus</title>
+  </head>
+
+  <body>
+    <div class="search-section">
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="container">
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input type="text" placeholder="What are you looking for?" />
+        </div>
+        <div class="delete">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </div>
+    <div class="quick-view-w">
+      <div class="container">
+        <div class="close">
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <div class="content">
+          <div class="preview">
+            <div class="current-img">
+              <img
+                src="imgs/men-products/t-shirts/t-shirt1/7242505612_2_6_8.jpg"
+                alt="img1"
+              />
+            </div>
+            <div class="other-imgs">
+              <div class="image">
+                <img
+                  src="imgs\men-products\t-shirts\t-shirt1\7242505612_2_4_8.jpg"
+                  alt="img2"
+                />
+              </div>
+              <div class="image">
+                <img
+                  src="imgs\men-products\t-shirts\t-shirt1\7242505612_2_3_8.jpg"
+                  alt="img3"
+                />
+              </div>
+              <div class="image">
+                <img
+                  src="imgs/men-products/t-shirts/t-shirt1/7242505612_2_5_8.jpg"
+                  alt="img4"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <div id="description">
+              <div class="name">
+                <h1 data-i18n="onePiece">One Piece T-shirt</h1>
+                <p class="number" data-i18n="number">#1256</p>
+                <p class="stock" data-i18n="availability">In Stock</p>
+              </div>
+              <div class="price"><span data-i18n="price">$64.99</span></div>
+              <div class="rate">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i
+                ><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div id="color">
+              <h4 data-i18n="colorDis">
+                COLOR: <span data-i18n="color">White</span>
+              </h4>
+              <div class="colors"><div class="square"></div></div>
+            </div>
+            <div id="size">
+              <h4 data-i18n="sizeDis">
+                SIZE: <span data-i18n="size">Medium</span>
+              </h4>
+              <div class="sizes">
+                <span class="size">XS</span><span class="size">S</span
+                ><span class="size">M</span><span class="size">L</span
+                ><span class="size">XL</span>
+              </div>
+            </div>
+            <div class="buy">
+              <div class="QTY">
+                <h4 data-i18n="qty">QTY:</h4>
+                <input type="number" value="1" />
+              </div>
+              <button class="dark" data-i18n="addToBag">ADD TO BAG</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ul-wrapper">
+      <div id="collapsed-navbar">
+        <div class="hum-ico"></div>
+      </div>
+      <div class="content">
+        <ul>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="shop.html" data-i18n="shop">Shop</a></li>
+          <li>
+            <a href="categories.html" data-i18n="categories">Categories</a>
+          </li>
+          <li><a href="blog.html" data-i18n="blog">Blog</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="logo">HAUS.</div>
+    </div>
+
+    <div class="login-form">
+      <div class="content">
+        <div class="close">
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <h1 data-i18n="loginTitle">login to Haus</h1>
+        <div class="facebook social">
+          <button>
+            <i class="fa-brands fa-facebook-f"></i
+            ><span data-i18n="facebookLogin">Login with facebook</span>
+          </button>
+        </div>
+        <div class="google social">
+          <button>
+            <i class="fa-brands fa-google"></i>
+            <span data-i18n="googleLogin">Login with Google</span>
+          </button>
+        </div>
+        <p data-i18n="or">Or</p>
+
+        <div class="input-box">
+          <div class="mail-box field">
+            <label data-i18n="email">E-mail</label>
+            <input type="email" placeholder="john.doe@example.com" />
+          </div>
+          <div class="mail-box field">
+            <label data-i18n="password">Password</label>
+            <input type="password" placeholder="Your password" />
+          </div>
+          <div class="options">
+            <div class="remember">
+              <label data-i18n="remember"
+                ><input type="checkbox" />Remember me</label
+              >
+            </div>
+            <div class="forgot">
+              <a href="" data-i18n="forgot">Forgot Password</a>
+            </div>
+          </div>
+
+          <div class="btn"><button data-i18n="loginBtn">log In</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-form">
+      <div class="content">
+        <div class="close">
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <h1 data-i18n="createAcc">Create Account</h1>
+        <p data-i18n="haveAcc">
+          Already have an account?
+          <a class="sign-in">Sign in</a>
+        </p>
+        <div class="facebook social">
+          <button>
+            <i class="fa-brands fa-facebook-f"></i
+            ><span data-i18n="facebookSign">Connect with facebook</span>
+          </button>
+        </div>
+        <div class="google social">
+          <button>
+            <i class="fa-brands fa-google"></i>
+            <span data-i18n="googleSign">Connect with Google</span>
+          </button>
+        </div>
+        <p data-i18n="or">Or</p>
+        <div class="input-box">
+          <div class="user-box field">
+            <input class="name" type="text" placeholder="First Name" />
+            <input class="last name" type="text" placeholder="Last Name" />
+          </div>
+          <div class="mail-box field">
+            <input type="email" placeholder="john.doe@example.com" />
+          </div>
+          <div class="password-box field">
+            <input type="password" placeholder="Your password" />
+          </div>
+        </div>
+        <div class="btn"><button data-i18n="signUpBtn">Sign Up</button></div>
+
+        <div class="options">
+          <div class="terms">
+            <label data-i18n="agreement"
+              ><input type="checkbox" />I agree to the
+              <a>Terms and Service</a> and <a>Privacy Policy</a></label
+            >
+            <label data-i18n="updates"
+              ><input type="checkbox" />Keep me updated via email</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="header">
+      <div class="logo">HAUS.</div>
+
+      <div id="nav-bar">
+        <div class="login-register">
+          <span class="login">login</span>
+          <span class="line"></span>
+          <span class="register">register</span>
+        </div>
+        <div class="nav-items">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li class="dropdown" data-mainDropdown>
+              <button class="link" data-mainDropdown-button>
+                Categories <i class="fa-solid fa-sort-down"></i>
+              </button>
+              <div id="subMenu">
+                <ul class="subMenu">
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>Men</button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Clothes</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Shoes</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>Women</button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Clothes</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Shoes</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>Children</button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Clothes</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Shoes</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>
+                      Accessories
+                    </button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div id="cart-search">
+          <button>Search</button>
+          <i class="fa-solid fa-bag-shopping cart"></i>
+          <div class="mode-icon">
+            <div class="dark-light"></div>
+          </div>
+          <div id="collapsed-navbar">
+            <div class="hum-ico"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <div class="container">
+          <div class="heading animate">
+            <h5>
+              hypes <br />
+              collection 2024
+            </h5>
+
+            <h1>
+              <span>Effortless</span>
+              Elegance
+            </h1>
+
+            <button class="normal">SHOP NOW !</button>
+          </div>
+
+          <div class="social">
+            <span class="icons"
+              ><i class="fa-brands fa-twitter animate"></i>
+              <i class="fa-brands fa-pinterest animate"></i>
+              <i class="fa-brands fa-instagram animate"></i>
+              <i class="fa-brands fa-facebook animate"></i
+            ></span>
+            <span class="line"></span>
+            <span class="title animate">OUR SOCIAL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section-pd">
+      <div class="pro animate">
+        <div class="pro-content">
+          <div class="icon"><i class="fa-solid fa-truck"></i></div>
+          <h5>FREE DELIVERY FROM $ 200</h5>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+            asperiores.
+          </p>
+        </div>
+        <div class="pro-content">
+          <div class="icon"><i class="fa-solid fa-wallet"></i></div>
+          <h5>CASH BACK GUARANTEED</h5>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+            asperiores.
+          </p>
+        </div>
+        <div class="pro-content">
+          <div class="icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h5>SECURE PAYMENT</h5>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+            asperiores.
+          </p>
+        </div>
+        <div class="pro-content">
+          <div class="icon"><i class="fa-regular fa-square-check"></i></div>
+          <h5>AUTHENTICITY 100% GUARANTEED</h5>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque,
+            asperiores.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="banners" class="banners">
+      <div class="banner animate animate1">
+        <div class="image">
+          <img src="imgs/watch.png" />
+        </div>
+        <div class="title">
+          <h2>luxury watch</h2>
+          <p>new 2023 watches</p>
+        </div>
+      </div>
+      <div class="banner banner2 animate">
+        <div class="image">
+          <img src="imgs/shoes.png" />
+        </div>
+        <div class="title">
+          <h2>shoes for men</h2>
+          <p>new model 2017 collection</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="new" class="section-pd">
+      <h1>new arrivals</h1>
+      <p>
+        Discover a fresh wave of fashion with our newest arrivals, designed to
+        redefine your wardrobe effortlessly.
+      </p>
+
+      <div class="products">
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span><span class="hot">hot</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/t-shirts/t-shirt1/7242505612_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/t-shirts/t-shirt1/7242505612_2_5_8.jpg"
+            />
+
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">One Piece T-shirt</div>
+            <div class="price">65$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span><span class="hot">hot</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/shirts/shirt5/4471502403_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/shirts/shirt5/4471502403_2_3_8.jpg"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Basic longline slogan</div>
+            <div class="price">55$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span><span class="hot">hot</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/pants/pant2/4679517704_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/pants/pant2/4679517704_2_3_8.jpg"
+            />
+
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Cargo trousers with contrast</div>
+
+            <div class="price">70$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/shoes/shoes2/2300940102_2_4_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/shoes/shoes2/2300940102_2_5_8.jpg"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Knit trainers</div>
+            <div class="stars"></div>
+            <div class="price">20$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/pants/pant1/Trousers for Man 2023.png"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/pants/pant1/Trousers for Man 2023 (1).png"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">italian trousers</div>
+
+            <div class="price">40$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/shirts/shirt8/4471510506_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/shirts/shirt8/4471510506_2_2_8.jpg"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Coloured stripes Shirt</div>
+
+            <div class="price">35$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span><span class="hot">hot</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+
+            <img
+              class="main-img"
+              src="imgs/men-products/t-shirts/t-shirt9/4230542251_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/t-shirts/t-shirt9/4230542251_2_3_8.jpg"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Long sleeve striped textured</div>
+
+            <div class="price">50$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/t-shirts/t-shirt10/4596703406_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/t-shirts/t-shirt10/4596703406_2_1_8.jpg"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Short sleeve plush T-shirt</div>
+
+            <div class="price">25$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span><span class="hot">hot</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/shirts/shirt1/4471500961_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/shirts/shirt1/4471500961_2_3_8.jpg"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Stand-up collar shirt</div>
+
+            <div class="price">30$</div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="image">
+            <div class="icons">
+              <div class="hot-new">
+                <span class="new">new</span>
+              </div>
+              <div class="like">
+                <i class="fa-regular fa-heart"></i>
+              </div>
+            </div>
+            <img
+              class="main-img"
+              src="imgs/men-products/shirts/shirt4/4470705500_2_6_8.jpg"
+            />
+            <img
+              class="hover-img"
+              src="imgs/men-products/shirts/shirt4/4470705500_2_3_8.jpg"
+            />
+            <div class="overlay"><span class="text">Quick View</span></div>
+          </div>
+          <div class="product-description">
+            <p class="brand">PULL&BEAR</p>
+            <div class="name">Relaxed fit shirt</div>
+
+            <div class="price">40$</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="spring-summer">
+      <div class="container">
+        <div class="content">
+          <div class="title">
+            <h5>
+              LATEST COLLECTION
+              <span class="showRightAnimate"></span>
+            </h5>
+            <h1>
+              <span class="h1-line animate">spring</span> summer 2023
+              <span class="ShowRightanimate"></span>
+            </h1>
+            <p>
+              Embrace the vibrant spirit of the season with our alluring new
+              spring-summer outfit collection, where every piece tells a story
+              of sun-kissed adventures and effortless style.<span
+                class="ShowRightanimate"
+              ></span>
+            </p>
+            <button class="dark animate">
+              LOOKBOOK <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="images">
+            <div class="l-image">
+              <img src="imgs/poster.jpg" class="animate" style="--i: 1" />
+            </div>
+            <div class="s-image">
+              <img src="imgs/s-poster.jpg" class="animate" style="--i: 2" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div class="container animate">
+        <h1>
+          Step into a world of style. Subscribe to HAUS for fashion-forward
+          updates
+        </h1>
+        <p>SUBSCRIBE TO OUR NEWSLETTER</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="E-mail" required />
+          <button class="normal" type="submit">I'M IN</button>
+        </form>
+        <div id="thank-you-message">Thank you for subscribing!</div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="container">
+        <div class="content">
+          <div class="help-section section">
+            <div class="title">
+              <h4>help</h4>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="items">
+              <div class="help-items expandable">
+                <ul>
+                  <li>Shipping & Return Policy</li>
+                  <li>Contact US</li>
+                  <li>Check Your Order</li>
+                  <li>F.A.Q.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="about-section section">
+            <div class="title">
+              <h4>about us</h4>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="items">
+              <div class="about-items expandable">
+                <ul>
+                  <li>Company Information</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms of Use</li>
+                  <li>Careers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="global-section">
+            <div class="app section">
+              <div class="title">
+                <h4>our app</h4>
+              </div>
+              <div class="stores">
+                <div class="store">
+                  <i class="fa-brands fa-apple"></i>
+                  <div class="store-info">
+                    <p>Available on the</p>
+                    <h4>App Store</h4>
+                  </div>
+                </div>
+                <div class="store">
+                  <i class="fa-brands fa-google-play"></i>
+                  <div class="store-info">
+                    <p>GET IT ON</p>
+                    <h4>Google play</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment section">
+              <div class="title">
+                <h4>payment methods</h4>
+                <i class="fas fa-chevron-down expand-icon"></i>
+              </div>
+              <div class="items">
+                <div class="payment-options expandable">
+                  <img
+                    src="imgs/payment/visa_payment_method_card_icon_142746.png"
+                  />
+                  <img src="imgs/payment/MasterCard_40946.png" />
+                  <img src="imgs/payment/Paypal-39_icon-icons.com_60555.png" />
+                </div>
+              </div>
+            </div>
+
+            <div class="social section">
+              <div class="title">
+                <h4>follow us!</h4>
+              </div>
+              <div class="social-icons">
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="copyright">
+      <div class="container">
+        <div class="title">Copyright © 2024 Haus. All rights reserved.</div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

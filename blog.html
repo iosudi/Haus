@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="resposinve.css" />
+    <title>Haus</title>
+  </head>
+
+  <body>
+    <div class="search-section">
+      <div class="close">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="container">
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i
+          ><input type="text" placeholder="What are you looking for?" />
+        </div>
+        <div class="delete">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="ul-wrapper">
+      <div id="collapsed-navbar">
+        <div class="hum-ico"></div>
+      </div>
+      <div class="content">
+        <ul>
+          <li><a href="index.html" data-i18n="home">Home</a></li>
+          <li><a href="shop.html" data-i18n="shop">Shop</a></li>
+          <li>
+            <a href="categories.html" data-i18n="categories">Categories</a>
+          </li>
+          <li><a href="blog.html" data-i18n="blog">Blog</a></li>
+          <li><a href="contact.html" data-i18n="contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="logo">HAUS.</div>
+    </div>
+
+    <div class="login-form">
+      <div class="content">
+        <div class="close">
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <h1 data-i18n="loginTitle">login to Haus</h1>
+        <div class="facebook social">
+          <button>
+            <i class="fa-brands fa-facebook-f"></i
+            ><span data-i18n="facebookLogin">Login with facebook</span>
+          </button>
+        </div>
+        <div class="google social">
+          <button>
+            <i class="fa-brands fa-google"></i>
+            <span data-i18n="googleLogin">Login with Google</span>
+          </button>
+        </div>
+        <p data-i18n="or">Or</p>
+
+        <div class="input-box">
+          <div class="mail-box field">
+            <label data-i18n="email">E-mail</label>
+            <input type="email" placeholder="john.doe@example.com" />
+          </div>
+          <div class="mail-box field">
+            <label data-i18n="password">Password</label>
+            <input type="password" placeholder="Your password" />
+          </div>
+          <div class="options">
+            <div class="remember">
+              <label data-i18n="remember"
+                ><input type="checkbox" />Remember me</label
+              >
+            </div>
+            <div class="forgot">
+              <a href="" data-i18n="forgot">Forgot Password</a>
+            </div>
+          </div>
+
+          <div class="btn"><button data-i18n="loginBtn">log In</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="register-form">
+      <div class="content">
+        <div class="close">
+          <i class="fa-solid fa-x"></i>
+        </div>
+        <h1 data-i18n="createAcc">Create Account</h1>
+        <p data-i18n="haveAcc">
+          Already have an account?
+          <a class="sign-in">Sign in</a>
+        </p>
+        <div class="facebook social">
+          <button>
+            <i class="fa-brands fa-facebook-f"></i
+            ><span data-i18n="facebookSign">Connect with facebook</span>
+          </button>
+        </div>
+        <div class="google social">
+          <button>
+            <i class="fa-brands fa-google"></i>
+            <span data-i18n="googleSign">Connect with Google</span>
+          </button>
+        </div>
+        <p data-i18n="or">Or</p>
+        <div class="input-box">
+          <div class="user-box field">
+            <input class="name" type="text" placeholder="First Name" />
+            <input class="last name" type="text" placeholder="Last Name" />
+          </div>
+          <div class="mail-box field">
+            <input type="email" placeholder="john.doe@example.com" />
+          </div>
+          <div class="password-box field">
+            <input type="password" placeholder="Your password" />
+          </div>
+        </div>
+        <div class="btn"><button data-i18n="signUpBtn">Sign Up</button></div>
+
+        <div class="options">
+          <div class="terms">
+            <label data-i18n="agreement"
+              ><input type="checkbox" />I agree to the
+              <a>Terms and Service</a> and <a>Privacy Policy</a></label
+            >
+            <label data-i18n="updates"
+              ><input type="checkbox" />Keep me updated via email</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="header">
+      <div class="logo">HAUS.</div>
+
+      <div id="nav-bar">
+        <div class="login-register">
+          <span class="login">login</span>
+          <span class="line"></span>
+          <span class="register">register</span>
+        </div>
+        <div class="nav-items">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li class="dropdown" data-mainDropdown>
+              <button class="link" data-mainDropdown-button>
+                Categories <i class="fa-solid fa-sort-down"></i>
+              </button>
+              <div id="subMenu">
+                <ul class="subMenu">
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>Men</button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Clothes</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Shoes</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>Women</button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Clothes</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Shoes</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>Children</button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Clothes</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Shoes</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown" data-dropdown>
+                    <button class="link" data-dropdown-button>
+                      Accessories
+                    </button>
+                    <div class="subCategory">
+                      <ul>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Rings</a></li>
+                        <li><a href="#">Earrings</a></li>
+                        <li><a href="#">Bracelets</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div id="cart-search">
+          <button>Search</button>
+          <i class="fa-solid fa-bag-shopping cart"></i>
+          <div class="mode-icon">
+            <div class="dark-light"></div>
+          </div>
+          <div id="collapsed-navbar">
+            <div class="hum-ico"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="land">
+      <div class="slider">
+        <div class="arrow left">
+          <div class="arrow-left landarr"></div>
+        </div>
+        <div class="caption">
+          <p class="title">fashion</p>
+          <h1>Fashion is the armor to survive the reality of everyday life</h1>
+          <p class="author">Bill Cunningham</p>
+        </div>
+        <div class="arrow right">
+          <div class="arrow-right landarr"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="posts">
+      <div class="container">
+        <h1 class="animate">latest posts</h1>
+        <div class="arrow left">
+          <div class="arrow-left"></div>
+        </div>
+        <div class="slider">
+          <ul class="carousel animate">
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/skin care.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Unlocking the secret to radiant, glowing skin</h2>
+              <span class="date"
+                >SEP 12,2023 | Isabella Rosenthal
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/watch 2.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Vintage watches for unique character and historical charm</h2>
+              <span class="date"
+                >SEP 12,2023 | Aurora Delacroix
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/make up.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Enhance your beauty with makeup magic.</h2>
+              <span class="date"
+                >SEP 12,2023 | Lila Sterling
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/clothes.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Effortless chic for the modern woman's wardrobe</h2>
+              <span class="date"
+                >SEP 12,2023 | Eloise Thorne
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/ring.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Circle of love and commitment, forever intertwined.</h2>
+              <span class="date"
+                >SEP 11,2023 | Celeste Nightshade
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/earring.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Dangling delights that frame your unique beauty.</h2>
+              <span class="date"
+                >SEP 11,2023 | Amara Fairchild
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/watch.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Seiko for reliable performance and timeless style.</h2>
+              <span class="date"
+                >SEP 11,2023 | Isolde Waverly
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+            <li class="card">
+              <div class="img">
+                <img src="imgs/cards/bag.jpg" draggable="false" />
+              </div>
+              <span>FASHION</span>
+              <h2>Carry your world in style and grace.</h2>
+              <span class="date"
+                >SEP 11,2023 | Seraphina Monroe
+                <i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></span>
+            </li>
+          </ul>
+        </div>
+        <div class="arrow right">
+          <div class="arrow-right"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="video">
+      <div class="container">
+        <h1 class="animate">top videos</h1>
+        <div class="arrow left">
+          <div class="arrow-left"></div>
+        </div>
+        <div class="player ">
+          <video
+            class="video "
+            src="videos/Pump It Up - SS23 Woman Editorial.mp4"
+            controlsList="nodownload"
+          ></video>
+          <div class="videoStatus">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div class="player_controls">
+            <div class="progress">
+              <div class="progressDurations"></div>
+            </div>
+            <div class="controls">
+              <div class="pause-play-skip">
+                <button
+                  data-skip="-10"
+                  class="player_button"
+                  title="backward 10s"
+                >
+                  <i class="fa-solid fa-backward"></i>
+                </button>
+                <button class="player_button toggle" title="Play">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+
+                <button
+                  data-skip="10"
+                  class="player_button"
+                  title="forward 10s"
+                >
+                  <i class="fa-solid fa-forward"></i>
+                </button>
+              </div>
+              <div class="volume">
+                <div class="volume-btn btn">
+                  <i class="fa-solid fa-volume-high"></i>
+                </div>
+                <div class="volume-wrapper">
+                  <div class="volume-panel">
+                    <div class="input-div">
+                      <div class="volume-input-div">
+                        <input type="range" value="30" />
+                        <div class="volume-progress"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="arrow right">
+          <div class="arrow-right"></div>
+        </div>
+        <div class="heading">
+          Elevate Your Style: Must-Have Trends and Tips for Effortless Fashion
+          in Every Season.
+        </div>
+        <p>
+          Explore seasonal fashion trends, expert styling tips, and more to
+          refine your style effortlessly.
+        </p>
+      </div>
+    </section>
+    <section id="newsletter">
+      <div class="container animate">
+        <h1>
+          Step into a world of style. Subscribe to HAUS for fashion-forward
+          updates
+        </h1>
+        <p>SUBSCRIBE TO OUR NEWSLETTER</p>
+        <form id="newsletter-form">
+          <input type="email" placeholder="E-mail" required />
+          <button class="normal" type="submit">I'M IN</button>
+        </form>
+        <div id="thank-you-message">Thank you for subscribing!</div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="container">
+        <div class="content">
+          <div class="help-section section">
+            <div class="title">
+              <h4>help</h4>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="items">
+              <div class="help-items expandable">
+                <ul>
+                  <li>Shipping & Return Policy</li>
+                  <li>Contact US</li>
+                  <li>Check Your Order</li>
+                  <li>F.A.Q.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="about-section section">
+            <div class="title">
+              <h4>about us</h4>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+            <div class="items">
+              <div class="about-items expandable">
+                <ul>
+                  <li>Company Information</li>
+                  <li>Privacy Policy</li>
+                  <li>Terms of Use</li>
+                  <li>Careers</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="global-section">
+            <div class="app section">
+              <div class="title">
+                <h4>our app</h4>
+              </div>
+              <div class="stores">
+                <div class="store">
+                  <i class="fa-brands fa-apple"></i>
+                  <div class="store-info">
+                    <p>Available on the</p>
+                    <h4>App Store</h4>
+                  </div>
+                </div>
+                <div class="store">
+                  <i class="fa-brands fa-google-play"></i>
+                  <div class="store-info">
+                    <p>GET IT ON</p>
+                    <h4>Google play</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment section">
+              <div class="title">
+                <h4>payment methods</h4>
+                <i class="fas fa-chevron-down expand-icon"></i>
+              </div>
+              <div class="items">
+                <div class="payment-options expandable">
+                  <img
+                    src="imgs/payment/visa_payment_method_card_icon_142746.png"
+                  />
+                  <img src="imgs/payment/MasterCard_40946.png" />
+                  <img src="imgs/payment/Paypal-39_icon-icons.com_60555.png" />
+                </div>
+              </div>
+            </div>
+
+            <div class="social section">
+              <div class="title">
+                <h4>follow us!</h4>
+              </div>
+              <div class="social-icons">
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-pinterest-p"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="copyright">
+      <div class="container">
+        <div class="title">Copyright © 2024 Haus. All rights reserved.</div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

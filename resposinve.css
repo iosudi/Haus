@@ -1,0 +1,957 @@
+@media (max-width: 1500px) {
+  #nav-bar ul {
+    gap: 50px;
+  }
+
+  .hero .heading h1 {
+    font-size: 75px;
+  }
+
+  .shop .heading h1 {
+    font-size: 45px;
+  }
+
+  #contact .container img {
+    height: 30em;
+  }
+}
+
+@media (max-width: 1470px) {
+  #spring-summer .title h5 {
+    font-size: 18px;
+  }
+
+  #spring-summer .title h1 {
+    width: 180px;
+    font-size: 80px;
+  }
+
+  #spring-summer .title h1 span::after {
+    width: 100px;
+    right: -120px;
+  }
+
+  #spring-summer .images .l-image {
+    width: 450px;
+  }
+
+  #spring-summer .images .s-image {
+    left: -150px;
+    width: 200px;
+  }
+
+  #contact .container img {
+    height: 26em;
+  }
+
+  #contact .container .form {
+    right: 90px;
+  }
+
+  #contact .container .title {
+    width: 25em;
+  }
+}
+
+@media (max-width: 1360px) {
+  #hero .hero-content {
+    background-position: center -5rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  .banners {
+    justify-content: center !important;
+  }
+  #banners,
+  .ban-pic {
+    flex-wrap: wrap;
+  }
+  #contact .container img {
+    height: 22em;
+  }
+
+  #contact .container .form {
+    right: 90px;
+  }
+
+  #contact .container .title {
+    width: 20em;
+  }
+
+  .search-section .search-bar input {
+    font-size: 30px;
+  }
+
+  .search-section .search-bar i {
+    font-size: 20px;
+  }
+
+  .search-section .container .delete {
+    width: 25px;
+    height: 25px;
+  }
+  .search-section .container .delete i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #nav-bar ul {
+    gap: 30px;
+  }
+
+  #hero .hero-content {
+    background-position: center -1rem;
+  }
+  #hero .shop {
+    background-position: center;
+  }
+
+  .hero .heading h1 {
+    font-size: 65px;
+  }
+
+  .shop .heading h1 {
+    font-size: 45px;
+  }
+
+  #hero .social {
+    gap: 20px;
+  }
+
+  #hero .social .icons {
+    gap: 20px;
+  }
+
+  #contact .container img {
+    height: 18em;
+  }
+
+  #contact .container .form {
+    right: 90px;
+  }
+
+  #contact .container .title {
+    width: 15em;
+  }
+}
+@media (max-width: 1260px) {
+  #spring-summer .title h5 {
+    font-size: 18px;
+  }
+
+  #spring-summer .title h1 {
+    width: 180px;
+    font-size: 80px;
+  }
+
+  #spring-summer .images .l-image {
+    width: 420px;
+  }
+
+  #spring-summer .images .s-image {
+    left: -120px;
+    width: 170px;
+  }
+}
+
+@media (max-width: 1100px) {
+  #nav-bar ul {
+    gap: 20px;
+  }
+
+  .hero .heading h1 {
+    font-size: 55px;
+  }
+
+  .shop .heading h1 {
+    font-size: 45px;
+  }
+
+  #hero .heading h5 {
+    font-size: 18px;
+  }
+
+  #hero .social {
+    gap: 18px;
+  }
+
+  #hero .social .icons {
+    gap: 18px;
+  }
+
+  .ban-pic {
+    padding: 20px 0;
+  }
+
+  #spring-summer .content {
+    gap: 3%;
+  }
+
+  #contact .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  #contact .container .heading {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    gap: 5%;
+  }
+
+  #contact .container .form {
+    right: 0;
+    top: -15px;
+  }
+
+  #contact .container .title {
+    width: 25em;
+  }
+
+  #contact .container img {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+
+  .search-section .search-bar input {
+    font-size: 25px;
+  }
+
+  .search-section .search-bar i {
+    font-size: 20px;
+  }
+
+  .search-section .container .delete {
+    width: 25px;
+    height: 25px;
+  }
+  .search-section .container .delete i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #spring-summer .title h5 {
+    font-size: 18px;
+  }
+
+  #spring-summer .title h1 {
+    width: 150px;
+    font-size: 65px;
+  }
+
+  #spring-summer .title h1 span::after {
+    width: 90px;
+    right: -110px;
+  }
+
+  #spring-summer .images .l-image {
+    width: 380px;
+  }
+
+  #spring-summer .images .s-image {
+    left: -90px;
+    width: 150px;
+  }
+
+  .search-section .container {
+    width: 100%;
+    margin: 2em;
+  }
+
+  .search-section .search-bar input {
+    font-size: 30px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .search-section .search-bar i {
+    font-size: 20px;
+  }
+
+  .search-section .container .delete {
+    width: 25px;
+    height: 25px;
+  }
+  .search-section .container .delete i {
+    font-size: 18px;
+  }
+
+  #video video {
+    width: 600px;
+  }
+}
+
+@media (max-width: 925px) {
+  #nav-bar .nav-items {
+    display: none;
+  }
+
+  #collapsed-navbar .hum-ico {
+    display: block;
+    z-index: 99;
+  }
+
+  .hero .heading h1 {
+    font-size: 50px;
+  }
+
+  .shop .heading h1 {
+    font-size: 45px;
+  }
+
+  #hero .heading h5 {
+    font-size: 15px;
+  }
+
+  #hero .social {
+    gap: 18px;
+  }
+
+  #hero .social .icons {
+    gap: 18px;
+  }
+
+  #new {
+    padding-bottom: 10px;
+  }
+
+  #spring-summer .content {
+    gap: 3%;
+  }
+
+  #newsletter .container h1 {
+    font-size: 35px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 910px) {
+  #new .product {
+    width: 250px;
+    height: 450px;
+  }
+
+  #footer .title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  #footer .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  #footer .title i {
+    display: block;
+    cursor: pointer;
+    font-size: 13px;
+    color: #666666;
+  }
+
+  #footer .title h4 {
+    text-transform: capitalize;
+    padding: 15px 0;
+  }
+
+  #footer .section {
+    border-bottom: 1px solid #c2c2c2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .items {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out; /* Add ease transition */
+  }
+
+  .items.expand {
+    max-height: 184px; /* Adjust this value to a suitable maximum height */
+  }
+
+  /* Additional styles for expanding */
+
+  #footer .global-section .payment-options {
+    padding-left: 30px;
+  }
+
+  #footer ul {
+    margin-top: 0px;
+  }
+
+  #footer li {
+    border-top: 1px solid #ccc;
+    padding: 15px 0;
+    margin: 0;
+    padding-left: 30px;
+  }
+
+  #footer .global-section .stores .store {
+    padding: 5px 15px;
+    width: 170px;
+  }
+
+  #footer .payment {
+    margin: 0;
+  }
+
+  #footer .container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #footer .global-section .stores {
+    margin-left: 1rem;
+  }
+
+  #footer .global-section .social-icons {
+    margin-left: 1rem;
+  }
+
+  #posts .container .carousel {
+    grid-auto-columns: calc((100% / 2) - 12px);
+  }
+}
+
+@media (max-width: 897px) {
+  #hero .container {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+
+  #hero .hero-content .social {
+    transform: rotate(0deg);
+  }
+
+  #posts .container .carousel img {
+    height: 250px !important;
+  }
+
+  #land .caption h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 835px) {
+  #hero .hero-content {
+    background-position: center top;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #hero .hero-content .container {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #hero .hero-content .heading {
+    width: 450px;
+  }
+
+  .ban-pic .banner {
+    width: 250px;
+    height: 400px;
+  }
+
+  .ban-pic .banner h2 {
+    font-size: 20px;
+  }
+  .ban-pic .banner p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 809px) {
+  #new h1 {
+    width: 100%;
+    font-size: 60px;
+  }
+
+  #new p {
+    font-size: 15px;
+  }
+
+  #new .products {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #new .product {
+    width: 200px;
+    height: 400px;
+  }
+  .ban-pic .banner {
+    width: 220px;
+    height: 350px;
+  }
+
+  .ban-pic .banner h2 {
+    font-size: 16px;
+  }
+  .ban-pic .banner p {
+    font-size: 16px;
+  }
+
+  #contact .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  #contact .container .heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0;
+    gap: 5%;
+  }
+
+  #contact .container .form {
+    right: 0;
+    top: 0px;
+  }
+
+  #contact .container .title {
+    width: 100%;
+    line-height: 20px;
+    margin: 20px 0;
+  }
+
+  #contact .container img {
+    width: 100%;
+    height: auto;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
+
+  #video video {
+    width: 550px;
+  }
+  #video .container p {
+    font-size: 15px;
+  }
+  #video .container .heading {
+    font-size: 25px;
+  }
+
+  #video {
+    padding: 1em;
+  }
+
+  #video .container .left {
+    left: 1%;
+  }
+  #video .container .right {
+    right: 1%;
+  }
+}
+@media (max-width: 690px) {
+  #banners {
+    padding: 25px 0px;
+  }
+
+  #spring-summer .title h5 {
+    font-size: 15px;
+  }
+
+  #spring-summer .title h1 {
+    width: 150px;
+    font-size: 55px;
+  }
+  #spring-summer .title p {
+    width: 250px;
+    font-size: 16px;
+  }
+  #spring-summer .title button {
+    width: 250px;
+    font-size: 16px;
+  }
+
+  #spring-summer .title h1 span::after {
+    width: 90px;
+    right: -110px;
+  }
+  #spring-summer .images .l-image {
+    width: 300px;
+  }
+  #spring-summer .images .s-image {
+    top: 250px;
+    left: 20px;
+    border-radius: 50px;
+  }
+  #spring-summer .images .s-image img {
+    border-radius: 50px;
+  }
+
+  .search-section .search-bar input {
+    font-size: 16px;
+  }
+
+  .search-section .search-bar i {
+    font-size: 15px;
+  }
+
+  .search-section .container .delete {
+    width: 20px;
+    height: 20px;
+  }
+  .search-section .container .delete i {
+    font-size: 18px;
+  }
+
+  #posts .container .carousel {
+    grid-auto-columns: 100%;
+  }
+
+  #video video {
+    width: 100%;
+  }
+
+  #video .container p {
+    font-size: 15px;
+    width: 80%;
+  }
+
+  #video .container .heading {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  #video {
+    padding: 2em;
+  }
+
+  #video .container .left {
+    left: 0.5%;
+  }
+
+  #video .container .right {
+    right: 0.5%;
+  }
+
+  #land .caption h1 {
+    font-size: 2rem;
+  }
+
+  #land .slider {
+    width: 90%;
+  }
+
+  #land .left {
+  left: 1%;
+}
+
+#land .right {
+  right: 1%;
+}
+}
+
+@media (max-width: 615px) {
+  .banners .banner {
+    width: 100%;
+  }
+
+  .ban-pic .banner {
+    width: 220px;
+    height: 350px;
+  }
+
+  #spring-summer {
+    overflow-y: visible;
+    padding-bottom: 70px;
+  }
+  #spring-summer .content {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #newsletter .container h1 {
+    font-size: 25px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  #spring-summer .title h1 {
+    font-size: 45px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+
+  #spring-summer .title {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  #spring-summer .title h5 {
+    line-height: 100px;
+    letter-spacing: 3px;
+  }
+
+  #spring-summer .title h1 span {
+    position: relative;
+  }
+
+  #spring-summer .title h1 span::after {
+    display: none;
+  }
+
+  #spring-summer .title p {
+    width: 100%;
+    margin: 50px 0;
+    font-size: 20px;
+    line-height: 25px;
+    color: #666666;
+  }
+
+  #spring-summer .images {
+    width: fit-content;
+    position: relative;
+    height: fit-content;
+  }
+
+  #contact .container .form label {
+    font-size: 18px;
+  }
+
+  #contact .container .form input::placeholder {
+    font-size: 15px;
+  }
+
+  #contact .container .form .row.row2 {
+    flex-direction: column;
+  }
+
+  #contact .container .form .our-info h4 {
+    font-size: 18px;
+  }
+
+  #contact .container .form .our-info p {
+    font-size: 15px;
+  }
+
+  #contact .container .form .our-info .social {
+    gap: 15px;
+  }
+
+  #posts .container .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  #nav-bar {
+    gap: 5px;
+    flex-direction: column-reverse;
+  }
+  #cart-search {
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 35px;
+    margin-top: 20px;
+  }
+
+  .shop-bg {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .shop .heading h1 {
+    font-size: 30px;
+  }
+
+  #hero .container h1 {
+    font-size: 30px;
+  }
+
+  #hero .container h5 {
+    font-size: 15px;
+  }
+
+  #hero .container button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+
+  .banners .banner h2 {
+    font-size: 20px;
+  }
+
+  .banners .banner p {
+    font-size: 16px;
+  }
+
+  .ban-pic .banner {
+    width: 170px;
+    height: 300px;
+  }
+
+  .ban-pic .banner .acc {
+    font-size: 14px;
+  }
+  .ban-pic .banner .acc-p {
+    font-size: 13px;
+  }
+
+  #hero .container .social {
+    flex-direction: column;
+  }
+
+  #new h1 {
+    font-size: 15vw;
+  }
+  #new p {
+    font-size: 4vw;
+  }
+  #footer .global-section .stores .store {
+    padding: 5px 0px 5px 5px;
+    width: 130px;
+  }
+
+  #footer .global-section .stores .store i {
+    font-size: 30px;
+  }
+
+  #footer .global-section .stores .store h4 {
+    font-size: 15px;
+  }
+  #footer .global-section .stores .store p {
+    font-size: 11px;
+  }
+
+  .quick-view-w .content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 15px;
+  }
+
+  #contact .container .form .message {
+    flex-direction: column;
+  }
+
+  #contact .container .form .our-info {
+    text-align: center;
+  }
+
+  #contact .container .form .our-info p {
+    font-size: 15px;
+  }
+
+  #contact .container .form .our-info .social {
+    gap: 15px;
+  }
+
+  #contact .container img {
+    display: none;
+  }
+
+  #posts .container {
+    padding: 0 3em;
+  }
+  #land .caption h1 {
+    font-size: 1.5rem;
+  }
+
+  #land .slider {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  #hero {
+    padding-top: 10px;
+  }
+  .banner .banner .image {
+    height: 50px;
+  }
+  #spring-summer .images .l-image {
+    width: 100%;
+  }
+
+  .shop-banners h3 {
+    font-size: 35px;
+    margin: 0 15px;
+  }
+
+  .ban-pic .banner {
+    width: 160px;
+    height: 280px;
+  }
+
+  #spring-summer .images .s-image {
+    border-radius: 5%;
+    top: 65%;
+    left: 10%;
+    width: 50%;
+  }
+
+  #newsletter .container input,
+  #newsletter .container button {
+    width: 100%;
+  }
+
+  .login .content h1 {
+    font-size: 30px;
+  }
+
+  .login .social button {
+    font-size: 20px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 354px) {
+  .ban-pic .banner {
+    margin: 0;
+  }
+
+  .ban-pic .banner {
+    width: 200px;
+    height: 320px;
+  }
+
+  .shop-banners h3 {
+    font-size: 26px;
+    margin: 0 15px;
+  }
+
+  .ban-pic .banner h1,
+  .ban-pic .banner .acc {
+    font-size: 18px;
+  }
+
+  .ban-pic .banner p,
+  .ban-pic .banner .acc-p {
+    font-size: 15px;
+  }
+
+  #video .container p {
+    font-size: 13px;
+  }
+
+  #video .container .heading {
+    font-size: 20px;
+  }
+}
