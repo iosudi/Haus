@@ -409,26 +409,26 @@ const right = $("#video .right");
 const left = $("#video .left");
 
 const videos = [
+  "videos/Bulgari Unexpected Wonders - a movie by Paolo Sorrentino.mp4",
   "videos/Pump It Up - SS23 Woman Editorial.mp4",
   "videos/‘The CHANEL Iconic’ Campaign — CHANEL Bags.mp4",
-  "videos/Bulgari Unexpected Wonders - a movie by Paolo Sorrentino.mp4",
   "videos/Video Fashion Ads. _ Passa Silkwear.mp4",
   "videos/Spring-Summer 2023 Campaign starring Gigi Hadid _ BOSS.mp4",
   "videos/MAC The Moment _ MAC Cosmetics.mp4",
 ];
 
 const titles = [
+  "Accessorize Like a Pro: Elevate Your Outfits with the Perfect Pieces.",
   "Elevate Your Style: Must-Have Trends and Tips for Effortless Fashion.",
   "Bags of Elegance: Elevate Your Style with Luxurious Women's Handbags.",
-  "Accessorize Like a Pro: Elevate Your Outfits with the Perfect Pieces.",
   "Effortless Elegance: Timeless Staples for a Stylish Wardrobe.",
   "Street Style Chronicles: Master Urban Fashion with Confidence.",
   "Glamour Unveiled: Mastering the Art of Evening Makeup for a Dazzling Night Out.",
 ];
 const paragraphs = [
+  "Learn to choose accessories that enhance your look and bring an extra touch of elegance.",
   "Explore seasonal fashion trends, expert styling tips, and more to refine your style effortlessly.",
   "Explore the world of designer handbags and find the perfect statement piece for your unique style.",
-  "Learn to choose accessories that enhance your look and bring an extra touch of elegance.",
   "Build a versatile wardrobe with timeless essentials that keep you chic for every occasion.",
   "Unleash your inner trendsetter with urban fashion tips that express your unique style.",
   "Learn the secrets of creating a captivating evening makeup look that will make you the star of the night.",
