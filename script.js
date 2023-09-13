@@ -286,108 +286,106 @@ arrowRight.on("click", next);
 /* carousel cards */
 
 // Select the carousel element with the jQuery selector
-$(document).ready(function () {
-  const carousel = $("#posts .container .carousel");
-  const arrows = $("#posts .arrow");
-  const firstCard = $("#posts .card").outerWidth(true);
-  const carouselChildren = carousel.children().toArray();
+const carousel = $("#posts .container .carousel");
+const arrows = $("#posts .arrow");
+const firstCard = $("#posts .card").outerWidth(true);
+const carouselChildren = carousel.children().toArray();
 
-  // Initialize variables to track dragging state and position
-  let isDragging = false,
-    startX,
-    startScrollLeft,
-    timeoutId;
+// Initialize variables to track dragging state and position
+let isDragging = false,
+  startX,
+  startScrollLeft,
+  timeoutId;
 
-  let cardPerView = Math.round(carousel.outerWidth(true) / firstCard);
+let cardPerView = Math.round(carousel.outerWidth(true) / firstCard);
 
-  // Prepend cards at the beginning and append cards at the end of the carousel
-  carouselChildren
-    .slice(-cardPerView)
-    .reverse()
-    .forEach(function (card) {
-      carousel.prepend($(card).prop("outerHTML"));
-    });
-
-  carouselChildren.slice(0, cardPerView).forEach(function (card) {
-    carousel.append($(card).prop("outerHTML"));
+// Prepend cards at the beginning and append cards at the end of the carousel
+carouselChildren
+  .slice(-cardPerView)
+  .reverse()
+  .forEach(function (card) {
+    carousel.prepend($(card).prop("outerHTML"));
   });
 
-  arrows.each(function () {
-    // Bind a click event handler to each arrow element
-    $(this).on("click", function (e) {
-      const arrow = $(this);
-      const isLeftArrow = arrow.hasClass("left");
-      const scrollAmount = isLeftArrow ? -firstCard : firstCard;
-
-      // Adjust the scrollLeft property of the carousel element
-      carousel.scrollLeft(carousel.scrollLeft() + scrollAmount);
-    });
-  });
-
-  // Function to start dragging
-  const dragStart = function (e) {
-    isDragging = true;
-    carousel.addClass("dragging");
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft();
-  };
-
-  // Function to stop dragging
-  const dragStop = function () {
-    isDragging = false;
-    carousel.removeClass("dragging");
-  };
-
-  // Function to handle dragging
-  const dragging = function (e) {
-    if (!isDragging) return; // Don't proceed if not dragging
-    carousel.scrollLeft(startScrollLeft - (e.pageX - startX));
-  };
-
-  // Function for infinite scrolling
-  const infiniteScroll = function () {
-    const $carousel = $("#posts .container .carousel");
-    const carouselScrollLeft = carousel.scrollLeft();
-    const carouselScrollWidth = carousel[0].scrollWidth;
-    const carouselWidth = carousel.outerWidth();
-
-    if (carouselScrollLeft === 0) {
-      carousel.addClass("no-transition");
-      $carousel.scrollLeft(carouselScrollWidth - 2 * carouselWidth);
-      carousel.removeClass("no-transition");
-    } else if (
-      Math.ceil(carouselScrollLeft) ===
-      carouselScrollWidth - carouselWidth
-    ) {
-      carousel.addClass("no-transition");
-      carousel.scrollLeft(carouselWidth);
-      carousel.removeClass("no-transition");
-    }
-
-    clearTimeout(timeoutId);
-    if (!carousel.is(":hover")) {
-      autoSlide();
-    }
-  };
-
-  const autoSlide = () => {
-    if ($(window).innerWidth() < 800) return;
-    timeoutId = setTimeout(
-      () => carousel.scrollLeft(carousel.scrollLeft() + firstCard),
-      3500
-    );
-  };
-
-  autoSlide();
-
-  // Attach event handlers
-  carousel.on("mousemove", dragging);
-  $(document).on("mouseup", dragStop);
-  carousel.on("mousedown", dragStart);
-  carousel.on("scroll", infiniteScroll);
-  carousel.on("mouseenter", () => clearTimeout(timeoutId));
-  carousel.on("mouseleave", autoSlide);
+carouselChildren.slice(0, cardPerView).forEach(function (card) {
+  carousel.append($(card).prop("outerHTML"));
 });
+
+arrows.each(function () {
+  // Bind a click event handler to each arrow element
+  $(this).on("click", function (e) {
+    const arrow = $(this);
+    const isLeftArrow = arrow.hasClass("left");
+    const scrollAmount = isLeftArrow ? -firstCard : firstCard;
+
+    // Adjust the scrollLeft property of the carousel element
+    carousel.scrollLeft(carousel.scrollLeft() + scrollAmount);
+  });
+});
+
+// Function to start dragging
+const dragStart = function (e) {
+  isDragging = true;
+  carousel.addClass("dragging");
+  startX = e.pageX;
+  startScrollLeft = carousel.scrollLeft();
+};
+
+// Function to stop dragging
+const dragStop = function () {
+  isDragging = false;
+  carousel.removeClass("dragging");
+};
+
+// Function to handle dragging
+const dragging = function (e) {
+  if (!isDragging) return; // Don't proceed if not dragging
+  carousel.scrollLeft(startScrollLeft - (e.pageX - startX));
+};
+
+// Function for infinite scrolling
+const infiniteScroll = function () {
+  const $carousel = $("#posts .container .carousel");
+  const carouselScrollLeft = carousel.scrollLeft();
+  const carouselScrollWidth = carousel[0].scrollWidth;
+  const carouselWidth = carousel.outerWidth();
+
+  if (carouselScrollLeft === 0) {
+    carousel.addClass("no-transition");
+    $carousel.scrollLeft(carouselScrollWidth - 2 * carouselWidth);
+    carousel.removeClass("no-transition");
+  } else if (
+    Math.ceil(carouselScrollLeft) ===
+    carouselScrollWidth - carouselWidth
+  ) {
+    carousel.addClass("no-transition");
+    carousel.scrollLeft(carouselWidth);
+    carousel.removeClass("no-transition");
+  }
+
+  clearTimeout(timeoutId);
+  if (!carousel.is(":hover")) {
+    autoSlide();
+  }
+};
+
+const autoSlide = () => {
+  if ($(window).innerWidth() < 800) return;
+  timeoutId = setTimeout(
+    () => carousel.scrollLeft(carousel.scrollLeft() + firstCard),
+    3500
+  );
+};
+
+autoSlide();
+
+// Attach event handlers
+carousel.on("mousemove", dragging);
+$(document).on("mouseup", dragStop);
+carousel.on("mousedown", dragStart);
+carousel.on("scroll", infiniteScroll);
+carousel.on("mouseenter", () => clearTimeout(timeoutId));
+carousel.on("mouseleave", autoSlide);
 
 const player = $("#video .player");
 const video = $("#video .video");
@@ -483,8 +481,9 @@ player.hover(
 function scrub(e) {
   const scrubTime = (e.offsetX / progress.outerWidth()) * video[0].duration;
   video[0].currentTime = scrubTime;
-}
 
+  console.log((e.offsetX / progress.outerWidth()) * video[0].duration);
+}
 
 function handleVolumeChange() {
   let percent = volumeRange.val();
