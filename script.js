@@ -209,7 +209,7 @@ const caption = $("#land .caption");
 const images = [
   "imgs/slider/1.jpg",
   "imgs/slider/2.jpg",
-  "imgs/slider/3.jpg",
+  "imgs/slider/3.jpeg",
   "imgs/slider/4.jpg",
   "imgs/slider/5.jpg",
   "imgs/slider/6.jpg",
@@ -345,18 +345,17 @@ const dragging = function (e) {
 
 // Function for infinite scrolling
 const infiniteScroll = function () {
-  const $carousel = $("#posts .container .carousel");
+  const carousel = $("#posts .container .carousel");
   const carouselScrollLeft = carousel.scrollLeft();
-  const carouselScrollWidth = carousel[0].scrollWidth;
+  const carouselScrollWidth = carousel[0].scrollWidth; // Use [0] to access the native DOM element
   const carouselWidth = carousel.outerWidth();
 
   if (carouselScrollLeft === 0) {
     carousel.addClass("no-transition");
-    $carousel.scrollLeft(carouselScrollWidth - 2 * carouselWidth);
+    carousel.scrollLeft(carouselScrollWidth - 2 * carouselWidth);
     carousel.removeClass("no-transition");
   } else if (
-    Math.ceil(carouselScrollLeft) ===
-    carouselScrollWidth - carouselWidth
+    carouselScrollLeft === Math.floor(carouselScrollWidth - carouselWidth)
   ) {
     carousel.addClass("no-transition");
     carousel.scrollLeft(carouselWidth);
@@ -509,7 +508,7 @@ function handleVolumeChange() {
 handleVolumeChange();
 
 function videoSlide(index) {
-  video.attr("src", `${videos[index]}`);
+  video.attr("src", videos[index]);
   title.text(titles[index]);
   paragraph.text(paragraphs[index]);
   isPlaying = false;
@@ -524,7 +523,7 @@ function videoSlide(index) {
   title.addClass("animation-fadeIn");
   paragraph.addClass("animation-fadeIn");
 
-  setTimeout(() => {
+  setTimeout(function () {
     video.removeClass("animation-fadeIn");
     title.removeClass("animation-fadeIn");
     paragraph.removeClass("animation-fadeIn");
