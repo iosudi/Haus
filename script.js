@@ -4,10 +4,11 @@ const mobileNavigation = $(".ul-wrapper");
 
 function toggleMobileNavigation() {
   mobileNavButton.toggleClass("is-active");
-  mobileNavigation.toggleClass("active");
+  mobileNavigation.toggleClass("easeIn");
 }
 
 mobileNavButton.on("click", toggleMobileNavigation);
+
 
 // Login and Registration Forms
 const loginButton = $("#header #nav-bar .login-register .login");
@@ -58,6 +59,21 @@ loginLinkInRegisterForm.on("click", function () {
   showLoginForm();
   hideRegisterForm();
 });
+
+//quick view
+const quickViewButton = $(".products .overlay .text");
+const quickViewWindow = $(".quick-view-w");
+const closeQuickView = $(".quick-view-w .close");
+
+quickViewButton.on("click", function () {
+  quickViewWindow.addClass("active");
+})
+
+closeQuickView.on("click", function () {
+  quickViewWindow.removeClass("active");
+});
+
+closeQuickView
 
 // Footer Sections
 const expand = $("#footer .title");
