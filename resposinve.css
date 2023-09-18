@@ -653,12 +653,12 @@
   }
 
   #land .left {
-  left: 1%;
-}
+    left: 1%;
+  }
 
-#land .right {
-  right: 1%;
-}
+  #land .right {
+    right: 1%;
+  }
 }
 
 @media (max-width: 615px) {
@@ -758,10 +758,44 @@
 }
 
 @media (max-width: 520px) {
+  .quick-view-w .container {
+    height: 100vh;
+    overflow-y: scroll;
+    padding: 15px 0;
+  }
+
+  .alert .content img {
+    height: 10em;
+  }
+
+  .alert .content h1 {
+    font-size: 25px;
+  }
+
+  .alert .content p {
+    font-size: 18px;
+  }
+
+  .alert .content button {
+    width: 150px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 15px;
+  }
+
+  .alert .content .social .icons {
+    font-size: 15px;
+  }
+
+  .alert .content .social h4 {
+    font-size: 18px;
+  }
+
   #nav-bar {
     gap: 5px;
     flex-direction: column-reverse;
   }
+
   #cart-search {
     gap: 20px;
   }
@@ -879,7 +913,42 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
+  .alert .content img {
+    height: 10em;
+  }
+
+  .alert .content button {
+    width: 130px;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 15px;
+  }
+
+  .alert .content .social .icons {
+    font-size: 15px;
+  }
+
+  .alert .content .social h4 {
+    font-size: 18px;
+  }
+
+  .login-form .content h1 {
+    font-size: 30px;
+  }
+
+  .login-form .social button {
+    font-size: 25px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 381px) {
+  .register-form .social button {
+    font-size: 20px;
+    gap: 10px;
+  }
+
   #hero {
     padding-top: 10px;
   }
@@ -911,18 +980,14 @@
   #newsletter .container button {
     width: 100%;
   }
-
-  .login .content h1 {
-    font-size: 30px;
-  }
-
-  .login .social button {
-    font-size: 20px;
-    gap: 10px;
-  }
 }
 
 @media (max-width: 354px) {
+  .login-form .social button {
+    font-size: 20px;
+    gap: 10px;
+  }
+
   .ban-pic .banner {
     margin: 0;
   }
