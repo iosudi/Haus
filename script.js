@@ -4,7 +4,7 @@ const mobileNavigation = $(".ul-wrapper");
 
 function toggleMobileNavigation() {
   mobileNavButton.toggleClass("is-active");
-  mobileNavigation.toggleClass("active");
+  mobileNavigation.toggleClass("easeIn");
 }
 
 mobileNavButton.on("click", toggleMobileNavigation);
@@ -58,6 +58,21 @@ loginLinkInRegisterForm.on("click", function () {
   showLoginForm();
   hideRegisterForm();
 });
+
+//quick view
+const quickViewButton = $(".products .overlay .text");
+const quickViewWindow = $(".quick-view-w");
+const closeQuickView = $(".quick-view-w .close");
+
+quickViewButton.on("click", function () {
+  quickViewWindow.addClass("active");
+});
+
+closeQuickView.on("click", function () {
+  quickViewWindow.removeClass("active");
+});
+
+closeQuickView;
 
 // Footer Sections
 const expand = $("#footer .title");
@@ -209,7 +224,7 @@ const caption = $("#land .caption");
 const images = [
   "imgs/slider/1.jpg",
   "imgs/slider/2.jpg",
-  "imgs/slider/3.jpg",
+  "imgs/slider/3.jpeg",
   "imgs/slider/4.jpg",
   "imgs/slider/5.jpg",
   "imgs/slider/6.jpg",
@@ -286,108 +301,112 @@ arrowRight.on("click", next);
 /* carousel cards */
 
 // Select the carousel element with the jQuery selector
-$(document).ready(function () {
-  const carousel = $("#posts .container .carousel");
-  const arrows = $("#posts .arrow");
-  const firstCard = $("#posts .card").outerWidth(true);
-  const carouselChildren = carousel.children().toArray();
+const carousel = $("#posts .container .carousel");
+const arrows = $("#posts .arrow");
+const firstCard = $("#posts .card").outerWidth(true);
+const carouselChildren = carousel.children().toArray();
 
-  // Initialize variables to track dragging state and position
-  let isDragging = false,
-    startX,
-    startScrollLeft,
-    timeoutId;
+// Initialize variables to track dragging state and position
+let isDragging = false,
+  startX,
+  startScrollLeft,
+  timeoutId;
 
-  let cardPerView = Math.round(carousel.outerWidth(true) / firstCard);
+let cardPerView = Math.round(carousel.outerWidth(true) / firstCard);
 
-  // Prepend cards at the beginning and append cards at the end of the carousel
-  carouselChildren
-    .slice(-cardPerView)
-    .reverse()
-    .forEach(function (card) {
-      carousel.prepend($(card).prop("outerHTML"));
-    });
-
-  carouselChildren.slice(0, cardPerView).forEach(function (card) {
-    carousel.append($(card).prop("outerHTML"));
+// Prepend cards at the beginning and append cards at the end of the carousel
+carouselChildren
+  .slice(-cardPerView)
+  .reverse()
+  .forEach(function (card) {
+    carousel.prepend($(card).prop("outerHTML"));
   });
 
-  arrows.each(function () {
-    // Bind a click event handler to each arrow element
-    $(this).on("click", function (e) {
-      const arrow = $(this);
-      const isLeftArrow = arrow.hasClass("left");
-      const scrollAmount = isLeftArrow ? -firstCard : firstCard;
-
-      // Adjust the scrollLeft property of the carousel element
-      carousel.scrollLeft(carousel.scrollLeft() + scrollAmount);
-    });
-  });
-
-  // Function to start dragging
-  const dragStart = function (e) {
-    isDragging = true;
-    carousel.addClass("dragging");
-    startX = e.pageX;
-    startScrollLeft = carousel.scrollLeft();
-  };
-
-  // Function to stop dragging
-  const dragStop = function () {
-    isDragging = false;
-    carousel.removeClass("dragging");
-  };
-
-  // Function to handle dragging
-  const dragging = function (e) {
-    if (!isDragging) return; // Don't proceed if not dragging
-    carousel.scrollLeft(startScrollLeft - (e.pageX - startX));
-  };
-
-  // Function for infinite scrolling
-  const infiniteScroll = function () {
-    const $carousel = $("#posts .container .carousel");
-    const carouselScrollLeft = carousel.scrollLeft();
-    const carouselScrollWidth = carousel[0].scrollWidth;
-    const carouselWidth = carousel.outerWidth();
-
-    if (carouselScrollLeft === 0) {
-      carousel.addClass("no-transition");
-      $carousel.scrollLeft(carouselScrollWidth - 2 * carouselWidth);
-      carousel.removeClass("no-transition");
-    } else if (
-      Math.ceil(carouselScrollLeft) ===
-      carouselScrollWidth - carouselWidth
-    ) {
-      carousel.addClass("no-transition");
-      carousel.scrollLeft(carouselWidth);
-      carousel.removeClass("no-transition");
-    }
-
-    clearTimeout(timeoutId);
-    if (!carousel.is(":hover")) {
-      autoSlide();
-    }
-  };
-
-  const autoSlide = () => {
-    if ($(window).innerWidth() < 800) return;
-    timeoutId = setTimeout(
-      () => carousel.scrollLeft(carousel.scrollLeft() + firstCard),
-      3500
-    );
-  };
-
-  autoSlide();
-
-  // Attach event handlers
-  carousel.on("mousemove", dragging);
-  $(document).on("mouseup", dragStop);
-  carousel.on("mousedown", dragStart);
-  carousel.on("scroll", infiniteScroll);
-  carousel.on("mouseenter", () => clearTimeout(timeoutId));
-  carousel.on("mouseleave", autoSlide);
+carouselChildren.slice(0, cardPerView).forEach(function (card) {
+  carousel.append($(card).prop("outerHTML"));
 });
+
+arrows.each(function () {
+  // Bind a click event handler to each arrow element
+  $(this).on("click", function (e) {
+    const arrow = $(this);
+    const isLeftArrow = arrow.hasClass("left");
+    const scrollAmount = isLeftArrow ? -firstCard : firstCard;
+
+    // Adjust the scrollLeft property of the carousel element
+    carousel.scrollLeft(carousel.scrollLeft() + scrollAmount);
+  });
+});
+
+// Function to start dragging
+const dragStart = function (e) {
+  isDragging = true;
+  carousel.addClass("dragging");
+  startX = e.pageX;
+  startScrollLeft = carousel.scrollLeft();
+};
+
+// Function to stop dragging
+const dragStop = function () {
+  isDragging = false;
+  carousel.removeClass("dragging");
+};
+
+// Function to handle dragging
+const dragging = function (e) {
+  if (!isDragging) return; // Don't proceed if not dragging
+  carousel.scrollLeft(startScrollLeft - (e.pageX - startX));
+};
+
+// Function for infinite scrolling
+const infiniteScroll = function () {
+  const carousel = $("#posts .container .carousel");
+  const carouselScrollLeft = carousel.scrollLeft();
+  const carouselScrollWidth = carousel[0].scrollWidth; // Use [0] to access the native DOM element
+  const carouselWidth = carousel.outerWidth();
+
+  console.log("carouselScrollLeft:", carouselScrollLeft);
+  console.log("carouselScrollWidth:", carouselScrollWidth);
+  console.log("carouselWidth:", carouselWidth);
+
+  if (carouselScrollLeft === 0) {
+    console.log("Scroll to end (left)");
+    carousel.addClass("no-transition");
+    carousel.scrollLeft(carouselScrollWidth - 2 * carouselWidth);
+    carousel.removeClass("no-transition");
+  } else if (
+    Math.ceil(carouselScrollLeft) ===
+    Math.floor(carouselScrollWidth - carouselWidth)
+  ) {
+    console.log("Scroll to beginning (right)");
+    carousel.addClass("no-transition");
+    carousel.scrollLeft(carouselWidth);
+    carousel.removeClass("no-transition");
+  }
+
+  clearTimeout(timeoutId);
+  if (!carousel.is(":hover")) {
+    autoSlide();
+  }
+};
+
+const autoSlide = () => {
+  if ($(window).innerWidth() < 800) return;
+  timeoutId = setTimeout(
+    () => carousel.scrollLeft(carousel.scrollLeft() + firstCard),
+    3500
+  );
+};
+
+autoSlide();
+
+// Attach event handlers
+carousel.on("mousemove", dragging);
+$(document).on("mouseup", dragStop);
+carousel.on("mousedown", dragStart);
+carousel.on("scroll", infiniteScroll);
+carousel.on("mouseenter", () => clearTimeout(timeoutId));
+carousel.on("mouseleave", autoSlide);
 
 const player = $("#video .player");
 const video = $("#video .video");
@@ -411,26 +430,26 @@ const right = $("#video .right");
 const left = $("#video .left");
 
 const videos = [
+  "videos/Bulgari Unexpected Wonders - a movie by Paolo Sorrentino.mp4",
   "videos/Pump It Up - SS23 Woman Editorial.mp4",
   "videos/‘The CHANEL Iconic’ Campaign — CHANEL Bags.mp4",
-  "videos/Bulgari Unexpected Wonders - a movie by Paolo Sorrentino.mp4",
   "videos/Video Fashion Ads. _ Passa Silkwear.mp4",
   "videos/Spring-Summer 2023 Campaign starring Gigi Hadid _ BOSS.mp4",
   "videos/MAC The Moment _ MAC Cosmetics.mp4",
 ];
 
 const titles = [
+  "Accessorize Like a Pro: Elevate Your Outfits with the Perfect Pieces.",
   "Elevate Your Style: Must-Have Trends and Tips for Effortless Fashion.",
   "Bags of Elegance: Elevate Your Style with Luxurious Women's Handbags.",
-  "Accessorize Like a Pro: Elevate Your Outfits with the Perfect Pieces.",
   "Effortless Elegance: Timeless Staples for a Stylish Wardrobe.",
   "Street Style Chronicles: Master Urban Fashion with Confidence.",
   "Glamour Unveiled: Mastering the Art of Evening Makeup for a Dazzling Night Out.",
 ];
 const paragraphs = [
+  "Learn to choose accessories that enhance your look and bring an extra touch of elegance.",
   "Explore seasonal fashion trends, expert styling tips, and more to refine your style effortlessly.",
   "Explore the world of designer handbags and find the perfect statement piece for your unique style.",
-  "Learn to choose accessories that enhance your look and bring an extra touch of elegance.",
   "Build a versatile wardrobe with timeless essentials that keep you chic for every occasion.",
   "Unleash your inner trendsetter with urban fashion tips that express your unique style.",
   "Learn the secrets of creating a captivating evening makeup look that will make you the star of the night.",
@@ -483,8 +502,9 @@ player.hover(
 function scrub(e) {
   const scrubTime = (e.offsetX / progress.outerWidth()) * video[0].duration;
   video[0].currentTime = scrubTime;
-}
 
+  console.log((e.offsetX / progress.outerWidth()) * video[0].duration);
+}
 
 function handleVolumeChange() {
   let percent = volumeRange.val();
@@ -510,7 +530,7 @@ function handleVolumeChange() {
 handleVolumeChange();
 
 function videoSlide(index) {
-  video.attr("src", `${videos[index]}`);
+  video.attr("src", videos[index]);
   title.text(titles[index]);
   paragraph.text(paragraphs[index]);
   isPlaying = false;
@@ -525,12 +545,14 @@ function videoSlide(index) {
   title.addClass("animation-fadeIn");
   paragraph.addClass("animation-fadeIn");
 
-  setTimeout(() => {
+  setTimeout(function () {
     video.removeClass("animation-fadeIn");
     title.removeClass("animation-fadeIn");
     paragraph.removeClass("animation-fadeIn");
   }, 550);
 }
+
+videoSlide(index);
 
 function before() {
   index--;
